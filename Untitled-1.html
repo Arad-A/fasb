@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طرز تهیه فسنجون</title>
+    <link rel="stylesheet" href="body{.css">
+</head>
+<body>
+    <div class="container">
+        <h1>طرز تهیه فسنجان</h1>
+
+        <h2>مواد لازم :</h2>
+        <ul>
+            <li>300 گرم گوشت مرغ یا گوسفند </li>
+            <li>200 گرم گردوی خرد شده </li>
+            <li>3 قاشق غذا خوری رب انار </li>
+            <li>1عددپیاز </li>
+            <li>زرد چوبه نمک و فلفل به مقدار لازم </li>
+            <li>روغن مایع به مقدار لازم </li>
+            <li>2 عدد لیمو عمانی (اختیاری)</li>
+        </ul>
+
+        <h2>طرز تهیه :</h2>
+            <ol>
+                <li>پیاز زا خورد کرده و در روغن تفت دهید </li>
+                <li>گوشت را اضاف کرده و با پیاز تفت دهید تا تغییر رنگ دهد </li>
+                <li>زردچوبه و نمک و فلفل را اضافه کنید </li>
+                <li>گردو را اضافه کرده و چند دقیقه تفت دهید </li>
+                <li>رب انار را اضافه کرده و با مواد مخلوط کنید </li>
+                <li>آب جوش اضافه کنید و بگذارید بپزد</li>
+                <li>در انتها لیمو عمانی را به خوراک اضافه کنید </li>
+                <li>بعد از پختن فسنجان را با برنج برای هانیه سرو کنید </li>
+            </ol>
+            <h3>حالا بیا پایین</h3>
+
+    
+    
+        <div class="heart-rain"></div>
+            <footer>
+                <p>بزن روی قلب </p>
+                <a href="#" class="heart" id="heartLink" title="کلیک کنید! ❤️">❤️</a>
+            </footer>
+        </div>
+<script>
+    const heartLink = document.getElementById('heartLink');
+    const heartRainContainer = document.querySelector('.heart-rain');
+
+    heartLink.addEventListener('click', (e) => {
+        e.preventDefault(); 
+        createHeart();
+    });
+
+    function createHeart() {
+        const heart = document.createElement('div');
+        heart.classList.add('heart-falling');
+        heart.innerText = '❤️';
+        heart.style.left = Math.random() * 100 + 'vw'; 
+
+        heartRainContainer.appendChild(heart);
+        
+        
+        setTimeout(() => {
+            heart.style.opacity = '1';
+            heart.style.animationDuration = Math.random() * 2 + 3 + 's'; 
+        }, 10);
+
+        
+        setTimeout(() => {
+            heart.remove();
+        }, 3000); 
+    }
+</script>
+</body>
+</html>
